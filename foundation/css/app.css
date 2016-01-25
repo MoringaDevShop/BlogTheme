@@ -160,12 +160,19 @@ p {
 #body-content {
     height: 100%;
     width: 100%;
-    min-width: 100%;
+    max-width: 1200px;
+}
+
+@media screen and (min-width: 64em) {
+    #body-content {
+        width: 1200px;
+        max-width: 1200px;
+    }
 }
 
 /*photo*/
 section#photo {
-    height: 100%;
+    height: 100vh;
     overflow: hidden;
     position: relative;
 }
@@ -245,23 +252,29 @@ hr {
 }
 
 /*-----------side -menu--------*/
-#con_flex p {
-    font-size: .7rem;
-}
 #right-menu {
     height: 100vh;
-    padding-top: 50px;
+/*    padding-top: 50px;*/
     text-align: center;
 }
 
-#right-menu div{
-    width: 60px;
+.flex {
+    position: relative;
+    height: auto;
+}
+
+.flex div{
+    width: 100%;
     height: 80px;
     color: darkgray;
     text-align: center;
 }
 
-#right-menu div:hover, #right-menu div p:hover {
+.flex  div p {
+    font-size: .7rem;
+}
+
+.flex  div:hover, .flex  div p:hover {
     color: #fff
 }
 
