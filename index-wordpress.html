@@ -7,11 +7,12 @@
     <!--Stylesheets-->
     <link rel="stylesheet" type="text/css" href="portfolio_edited.css">
     <link rel="stylesheet" type="text/css" href="portfolio_divs.css">
-    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" href="slider/vegas.min.css">
 
     <!--foundation-->
-        <link rel="stylesheet" href="foundation/css/foundation.min.css">
-        <link rel="stylesheet" href="foundation/css/app.css">
+    <link rel="stylesheet" href="foundation/css/foundation.min.css">
+    <link rel="stylesheet" href="foundation/css/app.css">
 
     <!-- Scripts -->
 
@@ -19,15 +20,71 @@
 <!---------------------------------------------------------------------->
 <body>
 
+<div id="all-content" class="row">
+
 <!---------------------------------------------------------------------->
 <!--/*-----------HEADER--------*/-->
+    <div id="heading" class="row columns">
 
-
-
+    </div>
 
 
 <!---------------------------------------------------------------------->
 <!--/*-----------BODY--------*/-->
+
+     <div id="body-content" class="row">
+
+        <!-- Photo section - left -->
+        <section id="photo" class="columns medium-5">
+            <div class="content-overlayed">
+                <!-- logo top -->
+                <div id="logo" class="row columns">
+                    <div class="center-h">
+                        <img src="img/logo-dark.png">
+                    </div>
+                </div>
+
+                <!-- Moringa Descrition -->
+                <div id="descr" class="row columns">
+                    <div class="center-h">
+                        <img src="img/logo-dark.png">
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Blog section - right -->
+        <div id="blog-list" class="columns medium-7">
+            <div class="row">
+                <h5>Blog Post 1</h5>
+            <p>
+                <span>L</span>orem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a iaculis leo. Sed quis rutrum eros. Sed eget ex nulla. Aliquam nec mattis sapien. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt lacinia nunc, in fermentum est varius sit amet.
+            </p>
+
+            </div>
+            <div class="row">
+                <h5>Blog Post 2</h5>
+                <p><span>A</span>enean ac dui eget ligula pulvinar facilisis. Donec porttitor finibus tincidunt. Curabitur tempor dignissim placerat. Suspendisse malesuada, velit quis ornare venenatis, nulla urna accumsan erat, congue scelerisque nisi elit in lacus. </p>
+
+            </div>
+            <div class="row">
+                <h5>Blog Post 3</h5>
+                <p>
+                <span>I</span>n sed est dignissim, commodo arcu nec, vehicula purus. Etiam eget velit orci. Donec semper pretium tincidunt. Cras non lorem sit amet justo sollicitudin luctus eu id lacus. Aliquam mauris libero, rutrum in tempus at, sagittis ut tellus. Pellentesque at porttitor ipsum.</p>
+
+            </div>
+
+
+
+
+        </div>
+
+
+
+    </div> <!-- body-content end -->
+
 
 
 
@@ -39,13 +96,38 @@
 
 <!---------------------------------------------------------------------->
 <!--/*-----------FOOTER--------*/-->
+<div id="footer" class="row columns"> </div>
 
 
 
 <!---------------------------------------------------------------------->
+</div> <!-- all content end -->
+<!---------------------------------------------------------------------->
     <!--- Scripts ----->
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="js/foundation.min.js"></script>
+
+    <!--Vegas-->
+    <script src="slider/vegas.min.js"></script>
+
+    <script>
+    $("#photo").vegas({
+        overlay: true,
+        transition: 'fade',
+        transitionDuration: 4000,
+        delay: 10000,
+//        animation: 'random',
+//        animationDuration: 20000,
+        slides: [
+            { src: "/assets/byakuya.jpg" },
+            { src: "/assets/urahara.jpg" },
+            { src: "/assets/ulquiora.jpg" },
+            { src: "/assets/ichigo.jpg"},
+        ],
+        overlay: '/slider/overlays/06.png'
+    });
+
+    </script>
 
 <!---------------------------------------------------------------------->
 

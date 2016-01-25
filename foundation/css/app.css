@@ -56,10 +56,15 @@ html, body {
 
 }
 
-h1, h2, h3, h4, a {
+h1, h2, h3, h4 {
     color: aliceblue;
-    font-family: MadRats;
+    font-family: Metropolis;
     text-align: center;
+}
+
+a {
+    font-family: Raleway-Regular;
+    color: #e2e43a;
 }
 
 
@@ -106,16 +111,67 @@ h1, h2, h3, h4, a {
 }
 
 /**------------------------------------------------------------------**/
+
+#all-content {
+    width: 100%;
+    height: 100vh !important;
+    min-height: 600px;
+    position: relative;
+    overflow: hidden;
+
+}
+
 /*-----------HEADER--------*/
-
-
-
-
+#heading {
+    height: 50px;
+    width: 100%;
+}
 
 
 /*-----------BODY--------*/
+#body-content {
+    height: 100%;
+    width: 100%;
+}
+
+/*photo*/
+section#photo {
+    height: 100%;
+    overflow: hidden;
+}
+
+.content-overlayed {
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+}
 
 
+/*blogs*/
+#blog-list {
+    height: 100%;
+}
+
+#blog-list div {
+    margin: 5px 5px 0 10px;
+    padding: 20px 10px 0 10px;
+}
+
+#blog-list h5 {
+    margin: 0 5px 0 10px;
+    padding: 0px 10px 0 10px;
+}
+
+#blog-list p {
+    margin: 0 5px 0 10px;
+    padding: 5px 10px 0 10px;
+}
+
+span {
+    font-family: Metropolis;
+    font-size: 3rem;
+    font-weight: bold;
+}
 
 
 /*-----------SIDEBAR--------*/
@@ -125,4 +181,8 @@ h1, h2, h3, h4, a {
 
 
 /*-----------FOOTER--------*/
-
+#footer {
+    height: 50px;
+    width: 100%;
+    margin-bottom: 0;
+}
