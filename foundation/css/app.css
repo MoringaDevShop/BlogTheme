@@ -42,7 +42,7 @@ html, body {
     width: 100%;
     height: 100%;
     min-width: 100%;
-    min-height: 100vh;
+    min-height: 800px;;
     margin: 0;
     padding: 0;
     border: 0;
@@ -109,6 +109,27 @@ p {
 .white-overlay {background-color:rgba(255,255,255, 0.9);}
 .black-overlay {background-color: rgba(0, 0, 0, 0.9);}
 
+/*Overlay transition */
+
+/*
+@keyframes overlay-change {
+    0% {background-color:rgba(192,192,192,0.6);}
+    25% {background-color:rgba(255,0,0,0.3);}
+    75% {background-color:rgba(0,255,0,0.3);}
+    100% {background-color:rgba(255,255,0,0.3);}
+
+}
+
+@-webkit-keyframes overlay-change {
+    0% {-webkit-background-color:rgba(192,192,192,0.6);}
+    25% {-webkit-background-color:rgba(255,0,0,0.3);}
+    75% {-webkit-background-color:rgba(0,255,0,0.3);}
+    100% {-webkit-background-color:rgba(255,255,0,0.3);}
+}
+*/
+
+/*-----------------------------------------*/
+
 /*Background colors*/
 .orange {
     color: #E87A4A;
@@ -147,7 +168,7 @@ p {
     min-width: 100%;
     margin: 0 auto;
     height: 100vh !important;
-    min-height: 100vh;
+    min-height: 800px;
     position: relative;
     overflow: hidden;
     background: url(../img/pattern_stripe.png) ;
@@ -175,7 +196,8 @@ p {
 
 /*photo*/
 section#photo {
-    height: 100vh;
+    height: 100%;
+    min-height: 800px;
     overflow: hidden;
 
 }
@@ -184,20 +206,68 @@ section#photo {
     z-index: 99;
     width: 100%;
     height: 100%;
-    position: relative;
+
+    -webkit-animation:
+        overlay-change 40s infinite;
+    animation:
+        overlay-change 40s infinite;
 }
 
-.logo, .descr, .title {
-    height: 100px;
+.overlays{
+    padding-top: 20px;
+    z-index: 9999;
     width: 100%;
-
+    height: 100%;
+    color: white;
 }
 
-.descr div, .logo div {
-    padding: 10px 15px 0 15px;
-    height: 150px;
+.logo, .descr, .title, .footer {
     width: 100%;
+    padding: 10px 15px 10px 15px;
     text-align: center;
+    position: absolute
+
+}
+.medium-12 p {
+    color: #000;
+}
+
+
+
+.logo {
+    bottom: 20px;
+}
+
+.title {
+    top: 0px;
+    font-size: 2rem;
+}
+
+.title h3 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.descr {
+    width: 100%;
+    bottom: 150px;
+}
+
+.descr p {
+     font-size: 1.1rem;
+}
+
+.footer {
+    bottom: 0;
+}
+
+.footer p {
+    font-size: .8rem;
+    font-weight: bold;
+
+}
+.descr div, .logo div {
+
     color: #fff;
     font-size: 1.1rem;
     font-weight: bold;
@@ -267,6 +337,7 @@ hr {
     width: 50px;
     margin-left: -5px;
     height: 330px;
+    position: relative;
 
 }
 
