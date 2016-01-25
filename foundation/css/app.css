@@ -42,7 +42,7 @@ html, body {
     width: 100%;
     height: 100%;
     min-width: 100%;
-    min-height: 100%;
+    min-height: 100vh;
     margin: 0;
     padding: 0;
     border: 0;
@@ -93,6 +93,10 @@ p {
     position: absolute;
 }
 
+.center-page {
+    width: 100%;
+    margin: 0 auto;
+}
 
 /*----- Colors with opacity ----*/
 
@@ -141,26 +145,25 @@ p {
 #all-content {
     width: 100%;
     min-width: 100%;
+    margin: 0 auto;
     height: 100vh !important;
     min-height: 100vh;
     position: relative;
     overflow: hidden;
-    background: url(../img/pattern_stripe.png);
+    background: url(../img/pattern_stripe.png) ;
+    -webkit-background-size: cover;
+    background-size: cover;
 
 }
 
 /*-----------header--------*/
-#heading {
-    height: 50px;
-    width: 100%;
-}
 
 
 /*-----------Content--------*/
 #body-content {
     height: 100%;
     width: 100%;
-    max-width: 1200px;
+    margin: 0 auto;
 }
 
 @media screen and (min-width: 64em) {
@@ -174,17 +177,18 @@ p {
 section#photo {
     height: 100vh;
     overflow: hidden;
-    position: relative;
+
 }
 
 .content-overlayed {
     z-index: 99;
     width: 100%;
     height: 100%;
+    position: relative;
 }
 
-.logo, .descr {
-    height: 50%;
+.logo, .descr, .title {
+    height: 100px;
     width: 100%;
 
 }
@@ -204,6 +208,7 @@ section#photo {
 #blog-list {
     height: 100%;
     background-color: #14181c;
+    margin: 0 auto;
 }
 
 #blog-list div {
@@ -254,23 +259,26 @@ hr {
 /*-----------side -menu--------*/
 #right-menu {
     height: 100vh;
-/*    padding-top: 50px;*/
     text-align: center;
+    margin: 0 auto;
 }
 
 .flex {
-    position: relative;
-    height: auto;
+    width: 50px;
+    margin-left: -5px;
+    height: 330px;
+
 }
 
 .flex div{
-    width: 100%;
+    width: 50px;
     height: 80px;
     color: darkgray;
     text-align: center;
+    padding-top: 35%;
 }
 
-.flex  div p {
+.flex div p {
     font-size: .7rem;
 }
 
