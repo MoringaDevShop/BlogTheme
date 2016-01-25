@@ -35,7 +35,7 @@ video{
   padding: 20px;
   text-align: center;
   border-radius: 50%;
-  background: url(images/thick_stripe.png);
+  background: url(img/thick_stripe.png);
 }
 #vCent{
   display: table;

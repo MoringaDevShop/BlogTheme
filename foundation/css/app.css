@@ -24,10 +24,11 @@
 }
 
 
-/* The Body
-============================================================================= */
+/* General Settings
+=========================================================================*/
 html,
 body,
+section,
 div,
 h1,
 p,
@@ -49,9 +50,9 @@ html, body {
     margin: 0;
 
     font-family: Raleway-Regular;
-     background:no-repeat center center fixed;
+    background: url(../img/bg.svg) #000 no-repeat center center fixed;
     -webkit-background-size: cover;
-    color: #555;
+    color: #fff;
     background-size: cover;
 
 }
@@ -65,6 +66,10 @@ h1, h2, h3, h4 {
 a {
     font-family: Raleway-Regular;
     color: #e2e43a;
+}
+
+p {
+    font-size: 0.9rem;
 }
 
 
@@ -89,7 +94,7 @@ a {
 }
 
 
-/* Colors with opacity */
+/*----- Colors with opacity ----*/
 
 .red-overlay {background-color:rgba(255,0,0,0.3);}
 .green-overlay {background-color:rgba(0,255,0,0.3);}
@@ -110,25 +115,26 @@ a {
     text-shadow: 0 0 2px #000;
 }
 
-/**------------------------------------------------------------------**/
-
+/*========================================================================*/
+/*BODY */
 #all-content {
     width: 100%;
     height: 100vh !important;
-    min-height: 600px;
+    min-height: 800px;
     position: relative;
     overflow: hidden;
+    background: url(../img/pattern_stripe.png);
 
 }
 
-/*-----------HEADER--------*/
+/*-----------header--------*/
 #heading {
     height: 50px;
     width: 100%;
 }
 
 
-/*-----------BODY--------*/
+/*-----------Content--------*/
 #body-content {
     height: 100%;
     width: 100%;
@@ -138,12 +144,29 @@ a {
 section#photo {
     height: 100%;
     overflow: hidden;
+    position: relative;
 }
 
 .content-overlayed {
     z-index: 99;
     width: 100%;
     height: 100%;
+}
+
+.logo, .descr {
+    height: 50%;
+    width: 100%;
+
+}
+
+.descr div, .logo div {
+    padding: 10px 15px 0 15px;
+    height: 150px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: bold;
 }
 
 
@@ -153,24 +176,36 @@ section#photo {
 }
 
 #blog-list div {
-    margin: 5px 5px 0 10px;
+    background-color: #14181c;
+    margin: 20px 5px 0 10px;
     padding: 20px 10px 0 10px;
 }
 
-#blog-list h5 {
+#blog-list .lowercase {
+    font-family: SlimJoe;
+    color: #e2e43a;
+    font-weight: bolder;
+    font-size: .9rem;
+    text-transform: lowercase;
     margin: 0 5px 0 10px;
     padding: 0px 10px 0 10px;
 }
 
 #blog-list p {
-    margin: 0 5px 0 10px;
-    padding: 5px 10px 0 10px;
+    margin: 0 5px 0 0px;
+    padding: 0 0px 0 10px;
 }
 
 span {
     font-family: Metropolis;
     font-size: 3rem;
     font-weight: bold;
+    color: #e2e43a;
+}
+
+hr {
+    color:darkgrey;
+    border-radius: .1px;
 }
 
 
@@ -180,7 +215,7 @@ span {
 
 
 
-/*-----------FOOTER--------*/
+/*-----------footer--------*/
 #footer {
     height: 50px;
     width: 100%;
