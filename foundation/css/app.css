@@ -102,8 +102,29 @@ p {
 .grey-overlay {background-color:rgba(192,192,192,0.6);}
 .yellow-overlay {background-color:rgba(255,255,0,0.3);}
 .cerise-overlay {background-color:rgba(255,0,255,0.3);}
+.white-overlay {background-color:rgba(255,255,255, 0.9);}
+.black-overlay {background-color: rgba(0, 0, 0, 0.9);}
 
+/*Background colors*/
+.orange {
+    color: #E87A4A;
+}
 
+.yellow {
+    color: #e2e43a;
+}
+
+.pink {
+    color: #F0414C;
+}
+
+.purple {
+    color: #4F4FE0;
+}
+
+.teal {
+    color: darkturquoise;
+}
 /* Borders */
 .rounded-small {
 /*    border: 3px solid #fff;*/
@@ -119,8 +140,9 @@ p {
 /*BODY */
 #all-content {
     width: 100%;
+    min-width: 100%;
     height: 100vh !important;
-    min-height: 800px;
+    min-height: 100vh;
     position: relative;
     overflow: hidden;
     background: url(../img/pattern_stripe.png);
@@ -138,6 +160,7 @@ p {
 #body-content {
     height: 100%;
     width: 100%;
+    min-width: 100%;
 }
 
 /*photo*/
@@ -173,25 +196,31 @@ section#photo {
 /*blogs*/
 #blog-list {
     height: 100%;
+    background-color: #14181c;
 }
 
 #blog-list div {
-    background-color: #14181c;
+
     margin: 20px 5px 0 10px;
-    padding: 20px 10px 0 10px;
+    padding: 20px 10px 20px 10px;
 }
 
-#blog-list .lowercase {
-    font-family: SlimJoe;
-    color: #e2e43a;
-    font-weight: bolder;
-    font-size: .9rem;
+#blog-list div:hover {
+    border: 1px solid white;
+}
+
+#blog-list h5 {
+    color: #fff;
+    font-size: 1.3rem;
+    letter-spacing: -1.5px;
     text-transform: lowercase;
     margin: 0 5px 0 10px;
     padding: 0px 10px 0 10px;
 }
 
 #blog-list p {
+    color:darkgray;
+    font-weight: bold;
     margin: 0 5px 0 0px;
     padding: 0 0px 0 10px;
 }
@@ -200,7 +229,7 @@ span {
     font-family: Metropolis;
     font-size: 3rem;
     font-weight: bold;
-    color: #e2e43a;
+    color: #E87A4A;
 }
 
 hr {
@@ -208,16 +237,52 @@ hr {
     border-radius: .1px;
 }
 
+.date {
+    height: 30px;
+    font-weight: bolder;
+    font-size: .7rem;
+    padding-top: 10px;
+}
 
-/*-----------SIDEBAR--------*/
+/*-----------side -menu--------*/
+#con_flex p {
+    font-size: .7rem;
+}
+#right-menu {
+    height: 100vh;
+    padding-top: 50px;
+    text-align: center;
+}
 
+#right-menu div{
+    width: 60px;
+    height: 80px;
+    color: darkgray;
+    text-align: center;
+}
 
+#right-menu div:hover, #right-menu div p:hover {
+    color: #fff
+}
+
+/*icons*/
+.size-12 { font-size: 12px; }
+.size-14 { font-size: 14px; }
+.size-16 { font-size: 16px; }
+.size-18 { font-size: 18px; }
+.size-21 { font-size: 21px; }
+.size-24 { font-size: 24px; }
+.size-36 { font-size: 36px; }
+.size-48 { font-size: 48px; }
+.size-60 { font-size: 60px; }
+.size-72 { font-size: 72px; }
+
+.icon {
+    text-align: center;
+
+}
 
 
 
 /*-----------footer--------*/
-#footer {
-    height: 50px;
-    width: 100%;
-    margin-bottom: 0;
-}
+
